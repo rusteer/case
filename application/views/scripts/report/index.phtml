@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Report</title>
+    <link rel="stylesheet" type="text/css" href="/static/extjs/resources/css/ext-all.css" />
+    <link rel="stylesheet" type="text/css" href="/static/extjs/examples/shared/example.css" />
+    <link rel="stylesheet" type="text/css" href="/css/report.css" />
+    <script type="text/javascript" src="/static/extjs/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/extcommon.js"></script>
+    <script type="text/javascript" src="/js/grid.js"></script>
+    <script type="text/javascript" src="/js/form.js"></script>
+    <script type="text/javascript">
+    window.provinceList=<?php echo json_encode($this->provinces);?>;
+    </script>
+</head>
+<body>
+	<div style="display:none"><a href="http://58.64.171.77/manager/clearremotecache/" target="_blank">清除缓存</a><br/></div>
+	<div id="toolbar" align="center"></div>
+	<div id="reportGrid" align="center"></div>
+	<input id="provinceId" type="hidden" value="<?php echo $this->provinceId;?>" />
+	<input id="from" type="hidden" value="<?php echo $this->from;?>" />
+	<input id="to" type="hidden" value="<?php echo $this->to;?>" />
+	<input id="tabId" type="hidden" value="<?php echo $this->tabId;?>" />
+	<form id="history-form" class="x-hide-display">
+		<input type="hidden" id="x-history-field" />
+		<iframe id="x-history-frame"></iframe>
+	</form>	
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户统计</title>
+<link rel="stylesheet" type="text/css"
+	href="/static/extjs/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css"
+	href="/static/extjs/examples/shared/example.css" />
+<script type="text/javascript" src="/static/extjs/bootstrap.js"></script>
+<script type="text/javascript" src="/js/vendor.js"></script>
+<style type="text/css" media="screen">
+.task .x-grid-cell-inner {
+	padding-left: 15px;
+}
+
+.x-grid-row-summary .x-grid-cell-inner {
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.icon-grid {
+	background: url(/static/extjs/examples/shared/icons/fam/grid.png) no-repeat 0
+		-1px;
+}
+</style>
+</head>
+<body>
+<?php
+$links='|';
+$targetProvinceName='';
+foreach($this->provinces as $province){
+	$links=$links.($province->id==$this->provinceId?"&nbsp;<font size='+1'>$province->name</font>&nbsp;|":'&nbsp;<a href="?provinceId='.$province->id.'">'.$province->name.'</a>&nbsp;|');
+}
+?>
+<div id="provinceDiv">
+<?php echo $links;?>
+</div>
+	<div id='grid-example'></div>
+	<input type="hidden" id="provinceId" value="<?php echo $this->provinceId;?>"/>
+</body>
+</html>

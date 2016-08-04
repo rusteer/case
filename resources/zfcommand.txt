@@ -1,0 +1,68 @@
+zf create db-table Guestbook guestbook
+zf create db-table BlackGroup black_group
+zf create db-table UserStatistics user_statistics;
+zf create model UserStatistics;
+
+zf create db-table AbstractTable abstract_table;
+
+zf create db-table WhiteUser white_user;
+zf create db-table WhiteBusiness white_business;
+zf create model WhiteUser;
+zf create model WhiteBusiness;
+zf create model BlackGroup
+
+zf create model AbstractBusiness
+
+zf create model GuestbookBusiness
+zf create model Guestbook
+zf create controller Guestbook
+zf create form Guestbook
+zf create action sign Guestbook
+
+
+zf create controller Manager
+zf create action index Manager
+zf create action clearwhite Manager
+zf create action status Manager
+zf create action svnupdate Manager
+
+
+zf create controller Security
+zf create action login Security
+zf create action input Security
+zf create action logout Security
+
+zf create controller Response
+zf create action index Response
+zf create action channel Response
+zf create action webflow Response
+zf create action webflow Response
+zf create action omit Response
+
+
+
+
+zf create controller Parser
+zf create action sms Parser
+
+zf create controller Report
+zf create action index Report
+zf create action user Report
+zf create action channel Report
+zf create action webflow Report
+
+zf create controller Order
+zf create action index Order
+
+
+
+
+zf create model WebflowGameHelper
+zf create model WebflowMmHelper
+zf create model WebflowVideoHelper
+zf create model WebflowBbxHelper
+zf create model WebflowAbstractHelper
+
+zf create model AbstractBusinessBusiness
+
+

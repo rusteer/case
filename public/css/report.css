@@ -1,0 +1,12 @@
+.task .x-grid-cell-inner { padding-left: 15px;}
+.x-grid-row-summary .x-grid-cell-inner {font-weight: bold;font-size: 11px;}
+.disabledEntity {color: red}
+.icon-grid {background: url(/static/extjs/examples/shared/icons/fam/grid.png) no-repeat 0 -1px;}
+.x-grid-row ,.x-grid-cell, .x-unselectable, .x-unselectable * {
+ -webkit-user-select: text !important;
+ -o-user-select: text !important;
+ -khtml-user-select: all !important;
+ -ms-user-select: text !important;
+ user-select: text !important;
+ -moz-user-select: text !important;
+}

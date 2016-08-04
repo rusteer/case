@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Webflow Test Data</title>
+</head>
+<body>
+<form method="post" action="/webflow/savedemo/">
+<input type="hidden" name="id" id="id">
+<textarea id="content" name="content" cols=100 rows=20></textarea><br/>
+<input type="submit" value="Submit"/>
+</form>
+<script type="text/javascript">
+var data=<?php echo json_encode($this->model);?>;
+if(data){
+	document.getElementById("id").value=data.id;
+	document.getElementById("content").value=data.content;
+}
+</script>
+</body>
+</html>

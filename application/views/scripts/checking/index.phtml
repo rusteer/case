@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>对账数据</title>
+<script type="text/javascript" src="/static/extjs/bootstrap.js"></script>
+<script type="text/javascript" src="/js/checking.js"></script>
+<script type="text/javascript">
+var showSmsPart=function(){
+	document.getElementById('smsBlockDiv').style.display='block';
+	document.getElementById('smsFlag').style.display='none';
+}
+</script>
+<link rel="stylesheet" type="text/css" href="/css/checking.css" />
+</head>
+<body>
+<input type="text" id="fromDate" value="<?php echo $this->from;?>" width="40" maxlength="10"/>
+	<input type="text" id="toDate" value="<?php echo $this->to;?>"  width="40" maxlength="10"/>
+	<select id="partnerSelect" onChange="javascript:showBusiness(this.value)"></select>
+	<hr/>
+	基地业务:
+	<select id="webflowSelect" onChange="javascript:initWebflowRequest()"></select> 
+	    <input type="button" value="查询" onClick="initWebflowRequest()"/>
+
+	
+	<div id="webflowDiv" class="datagrid"></div>
+	<a href="javascript:showSmsPart();" id="smsFlag">显示短信数据</a>	
+	<div style="display:none" id="smsBlockDiv">
+	<hr/>
+	短信业务:<select id="channelSelect" onChange="javascript:initChannelRequest()"></select> 
+	    <input type="button" value="查询" onClick="initChannelRequest()"/>
+	    <div id="channelDiv" class="datagrid"></div>
+	</div>
+	<script>
+    window.businesses=<?php echo Zend_Json::encode($this->businesses);?>;
+	</script>
+</body>
+</html>

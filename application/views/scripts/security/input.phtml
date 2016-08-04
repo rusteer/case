@@ -1,0 +1,66 @@
+<style type="text/css">
+.bodytext {
+	FONT-SIZE: 10pt;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.macnotes {
+	FONT-SIZE: 8pt;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+.buttontext {
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: Verdana, Arial, Helvetica, San-serif
+}
+
+.loginboxtext {
+	FONT-SIZE: 10pt;
+	FONT-FAMILY: Verdana, Arial, Helvetica, San-serif
+}
+
+.pluslink {
+	FONT-SIZE: 10pt;
+	FONT-FAMILY: Verdana, Arial, Helvetica, San-serif
+}
+</style>
+
+<form action="/security/login/" method="post">
+  <input type="hidden" value="<?php echo $_REQUEST['target']?>" name="target" id="target">
+	<table width="180" align="center" border="0" cellpadding="3" cellspacing="0">
+		<tr>
+			<td bgcolor="#004f4f"><font size="2" color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif"><b>&nbsp;&nbsp;&nbsp;Login</b> </font></td>
+		</tr>
+		<tr>
+			<td bgcolor="#eeeeee">
+				<table width="80%" align="center">
+					<tbody>
+						<tr height="30">
+							<td class="loginboxtext" colspan="2" valign="bottom">Username:</td>
+						</tr>
+						<tr>
+							<td colspan="2"><input name="username"  maxsize="64"></td>
+						</tr>
+						<tr height="10">
+							<td class="loginboxtext" colspan="2" valign="bottom">Password:<br>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"><input name="password"  type="password"><br></td>
+						</tr>
+						<tr height="40">
+							<td></td>
+							<td align="right"><input class="buttontext" value="Login" name="login" type="submit"></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+</form>
+<script>
+if(window.location.hash){
+	var targetObj=document.getElementById('target');
+	targetObj.value=targetObj.value+window.location.hash;
+}
+</script>
